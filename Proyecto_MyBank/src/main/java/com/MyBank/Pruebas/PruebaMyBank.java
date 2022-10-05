@@ -10,14 +10,16 @@ public class PruebaMyBank {
 		Cuenta cuenta1 = new Cuenta(100);
 		Cliente cliente = new Cliente("Alexander", "Tupiza", cuenta1);
 		System.out.println("el saldo de su cuenta es :");
-		System.out.println(cliente.getCuenta().getSaldo());
-		System.out.println("Ha depositado " + cantidad);
+		System.out.println(cliente.getCuenta().getSaldo()+ " euros"+ "\n");
+		
+		System.out.println("Ha depositado " + cantidad + " euros");
 		cliente.getCuenta().depositar(cantidad);
 		System.out.println("Su saldo actual es: ");
-		System.out.println(cliente.getCuenta().getSaldo());
-		System.out.println("Ha retirado "+ retirada);
+		System.out.println(cliente.getCuenta().getSaldo()+ "\n");
+		
+		System.out.println("Ha retirado "+ retirada+ " euros");
 		cliente.getCuenta().retirada(retirada);
-		System.out.println("su saldo actual es:" +cliente.getCuenta().getSaldo());
+		System.out.println("su saldo actual es: " +cliente.getCuenta().getSaldo() + "euros");
 		
 		
  }
