@@ -2,12 +2,13 @@ package com.MyBank;
 
 public class Cuenta {
 
-	private double saldo;
+	protected double saldo;
 
 	public Cuenta(double saldo) {
 		this.saldo = saldo;
 
 	}
+	
 
 	public double getSaldo() {
 		return saldo;
@@ -34,5 +35,13 @@ public class Cuenta {
 		return resultado;
 
 	}
+
+
+	@Override
+	public String toString() {
+		return "Cuenta [saldo=" + saldo + "]";
+	}
+	
+	
 
 }
