@@ -16,7 +16,7 @@ import com.bank.servicios.BanckService;
 /**
  * Servlet implementation class ListaClientesServlet
  */
-@WebServlet(urlPatterns = "altaProducto",loadOnStartup = 1)
+
 public class ListaClientesServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -34,10 +34,10 @@ public class ListaClientesServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("estoy en el do post");
 		List<Customer> listaclientes = listaService.dameTodosLosClientes();
-		request.setAttribute("lista1", listaclientes);
+		request.setAttribute("lista", listaclientes);
 		RequestDispatcher rd = request.getRequestDispatcher("listaClientes.jsp");
 		rd.forward(request, response);
 	}
