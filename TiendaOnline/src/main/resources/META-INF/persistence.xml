@@ -12,6 +12,8 @@
 		<class>com.curso.ejemplos.entidades.Record</class>
 		<class>com.curso.ejemplos.entidades.Customer</class>
 		<class>com.curso.ejemplos.entidades.Order</class> -->
+		
+		<class>com.curso.mercado.entidades.Producto</class>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		
 		

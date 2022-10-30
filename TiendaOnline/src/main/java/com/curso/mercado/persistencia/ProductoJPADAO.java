@@ -22,7 +22,7 @@ public class ProductoJPADAO implements GenericDAO<Producto>{
 		//Departamento d = em.find(Departamento.class, 10);
 		em.getTransaction().begin();
 		em.persist(entidad);
-		System.out.println("Se ha crado el empleado id" + entidad.getDescripcion());
+		System.out.println("Se ha crado el producto  id " + entidad.getDescripcion());
 		em.getTransaction().commit();
 		
 	}
@@ -30,8 +30,9 @@ public class ProductoJPADAO implements GenericDAO<Producto>{
 	@Override
 	public List<Producto> getAll() {
 		EntityManager em = factory.createEntityManager();
-		
-		Query consulta = em.createQuery("SELECT * FROM Producto");
+		/*Query consulta3 =
+		 * em.createNativeQuery("SELECT * FROM DEPARTMENTS",Departamento.class);*/
+		Query consulta = em.createNativeQuery("SELECT * FROM PRODUCTOS",Producto.class);
 		List<Producto> lista = consulta.getResultList();
 		return lista;
 		
